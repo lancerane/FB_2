@@ -1,5 +1,6 @@
 #pragma once
 #include "stdafx.h"
+#include "XML_Parameters.h"
 
 
 /*
@@ -39,7 +40,8 @@ public:
 	double length_change;
 	double optimal_length;
 	double tendon_length;
-	double l_v_factor;
+	double active_force_factor;
+	double passive_force_factor;
 
 	double max_force;
 
@@ -57,6 +59,6 @@ public:
 	void mus_wrapping(Segment **segment_data[], Structure *calibrate_pos[], int i);
 	void mus_length();
 	void mus_length_change(Muscle **muscle_data[], int muscle);
-	void mus_length_velocity_factors(int muscle);
+	void mus_length_velocity_factors(XML_Parameters* _parameters, int muscle);
 
 };

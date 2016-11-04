@@ -21,7 +21,8 @@ void m06_04_output_muscle_geometry(Muscle **muscle_data[], int frames, int muscl
 	Mat_DP out(frames,(pnts)*3);
 	Mat_DP out_2(frames,1);
 	Mat_DP out_3(frames, 1);
-	Mat_DP out_4(frames, 1);
+	Mat_DP out_4(frames, 163);
+	Mat_DP out_5(frames, 163);
 	string name_test;
 	
 
@@ -35,10 +36,11 @@ void m06_04_output_muscle_geometry(Muscle **muscle_data[], int frames, int muscl
 			{
 
 				out[i][3*j+k]=muscle_data[i][muscle]->gblpnts[j][k];
-				out_2[i][0] = muscle_data[i][muscle]->length_change; //gives length change at each frame
-				out_3[i][0] = muscle_data[i][muscle]->length; //length at each frame
-				name_test = muscle_data[i][muscle]->name; //muscle name
-				out_4[i][0] = muscle_data[i][muscle]->l_v_factor;
+				//out_2[i][0] = muscle_data[i][muscle]->length_change; //gives length change at each frame
+				//out_3[i][0] = muscle_data[i][muscle]->length; //length at each frame
+				//name_test = muscle_data[i][muscle]->name; //muscle name
+				out_4[i][muscle] = muscle_data[i][muscle]->active_force_factor;
+				out_5[i][muscle] = muscle_data[i][muscle]->passive_force_factor;
 			}
 
 		}
@@ -57,8 +59,11 @@ void m06_04_output_muscle_geometry(Muscle **muscle_data[], int frames, int muscl
 	string filename2 = output_folder_for_visualisation + "\\" + study_name + "_" + "muscle_length" + "_" + name_test  + ".csv";
 	io_dataoutput(filename2, out_3);
 
-	string filename3 = output_folder_for_visualisation + "\\" + study_name + "_" + "factors" +  "_" + name_test + ".csv";
+	string filename3 = output_folder_for_visualisation + "\\" + study_name + "_" + "active_force_factors" + ".csv";
 	io_dataoutput(filename3, out_4);
+
+	string filename4 = output_folder_for_visualisation + "\\" + study_name + "_" + "passive_force_factors" + ".csv";
+	io_dataoutput(filename4, out_5);
 
 	return;
 }

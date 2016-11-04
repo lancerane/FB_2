@@ -11,7 +11,7 @@ c:\users\lr2214\documents\freebody-master\model v2\nrutil_nr.h(471): warning C42
   m06_07_output_marker.cpp
   m06_08_output_ref_coord.cpp
   mus_length_velocity_factors.cpp
-mus_length_velocity_factors.cpp(20): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+mus_length_velocity_factors.cpp(32): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
   XML_anatomy_dataset_parameters.cpp
   kin_cardan.cpp
   kin_compare_vec.cpp
@@ -130,7 +130,7 @@ m05_02_horsman_muscle_model.cpp(33): warning C4101: 'betha': unreferenced local 
   XML_Parameters.cpp
   Generating code
 c:\users\lr2214\documents\freebody-master\model v2\xml_parameters.cpp(53): warning C4715: 'XML_Parameters::str_to_bool': not all control paths return a value
-  All 547 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 540 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   Model v2.vcxproj -> C:\Users\LR2214\Documents\FreeBody-master\Release\Freebody 2.1.exe
   Model v2.vcxproj -> C:\Users\LR2214\Documents\FreeBody-master\Release\Freebody 2.1.pdb (Full PDB)

@@ -53,7 +53,7 @@ void m05_00_muscle_model(Segment **segment_data[], Structure *calibrate_pos[], M
 		{
 			muscle_data[i][j]->mus_length_change(muscle_data,j);
 			muscle_data[i][j]->mus_upper_bound();
-			muscle_data[i][j]->mus_length_velocity_factors(j);
+			muscle_data[i][j]->mus_length_velocity_factors(_parameters, j);
 		}
 	}
 	for (int i=0; i<frames; i++) 
