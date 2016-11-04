@@ -1,0 +1,1 @@
+void m06_07_output_marker(Segment **segment_data[], Structure *calibrate_pos[], int frames, int segments, string output_folder_for_visualisation, string study_name);

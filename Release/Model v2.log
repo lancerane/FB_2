@@ -1,0 +1,136 @@
+﻿  stdafx.cpp
+c:\users\lr2214\documents\freebody-master\model v2\nrutil_nr.h(43): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\lr2214\documents\freebody-master\model v2\nrutil_nr.h(468): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\lr2214\documents\freebody-master\model v2\nrutil_nr.h(469): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\lr2214\documents\freebody-master\model v2\nrutil_nr.h(470): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\lr2214\documents\freebody-master\model v2\nrutil_nr.h(471): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  m06_02_output_inverse_dynamics_values.cpp
+  m06_06_output_segment_lcs.cpp
+  m01_04_cal_orientation.cpp
+  m01_05_cal_direction.cpp
+  m06_07_output_marker.cpp
+  m06_08_output_ref_coord.cpp
+  mus_length_velocity_factors.cpp
+mus_length_velocity_factors.cpp(20): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  XML_anatomy_dataset_parameters.cpp
+  kin_cardan.cpp
+  kin_compare_vec.cpp
+  kin_dist_2_lines.cpp
+  kin_dist_point_line.cpp
+  kin_line_line_intersect.cpp
+  kin_perp_point_on_line.cpp
+  m02_03_01_calc_seg_pos_vectors.cpp
+m02_03_01_calc_seg_pos_vectors.cpp(18): warning C4101: 'hip_constraint': unreferenced local variable
+  m02_04_01_scaling.cpp
+m02_04_01_scaling.cpp(32): warning C4101: 'subject': unreferenced local variable
+m02_04_01_scaling.cpp(32): warning C4101: 'width_reference': unreferenced local variable
+  m02_05_01_joint_flexion.cpp
+  m02_05_02_patella_perf_parameters.cpp
+  m02_05_03_patella_contact.cpp
+  m02_05_patella_segment.cpp
+  Compiling...
+  m02_07_tf_contact.cpp
+  m02_10_define_rotation_centres.cpp
+m02_10_define_rotation_centres.cpp(22): warning C4101: 'tf_constraint': unreferenced local variable
+  m03_00_set_anth.cpp
+  m05_01_01_initialize_all_muscles.cpp
+  m05_01_02_initialize_generic_quad.cpp
+  m05_02_horsman_muscle_model.cpp
+m05_02_horsman_muscle_model.cpp(33): warning C4101: 'betha': unreferenced local variable
+  m05_03_patella_ratios.cpp
+  m05_04_wrap_cylinder.cpp
+  m06_00_output_data.cpp
+  m06_01_output_kinematics.cpp
+  m06_03_output_opt_values_3.cpp
+  m06_04_output_muscle_geometry.cpp
+  m06_05_output_bony_geometry.cpp
+  math_det2.cpp
+  math_det3.cpp
+  math_dotprd.cpp
+  math_max.cpp
+  math_qnorm.cpp
+  math_qnormalise.cpp
+  Model v2.cpp
+  Compiling...
+  mus_length.cpp
+  mus_length_change.cpp
+  mus_opt_pt_2.cpp
+  mus_opt_values_2.cpp
+  mus_upper_bound.cpp
+  mus_wrapping.cpp
+  seg_rot_to_gcs.cpp
+  math_landmarkmatrix.cpp
+  kin_vecrotate.cpp
+  Structure.cpp
+  pythag.cpp
+  struc_pos_point_in_calib.cpp
+  struc_pos_point_in_lcs.cpp
+  struc_rot_hors_to_lcs.cpp
+  svbksb.cpp
+  svdcmp.cpp
+  tqli.cpp
+  tred2.cpp
+  math_crossprd.cpp
+  math_deriv.cpp
+  Compiling...
+  math_mxmply.cpp
+  math_qcon.cpp
+  math_qmply.cpp
+  math_skew_vec_to_matrix.cpp
+  math_trace.cpp
+  math_transpose.cpp
+  math_vecmag.cpp
+  math_vecnorm.cpp
+  math_zeromatrix.cpp
+  kin_crossdisp.cpp
+  kin_distpnts.cpp
+  kin_markcalc.cpp
+  kin_qcalc.cpp
+  kin_qdot.cpp
+  kin_qrotate.cpp
+  kin_rmatcalc.cpp
+  m02_00_create_segments.cpp
+  m02_02_make_lcs.cpp
+  m02_01_anatomy_dataset_landmarks.cpp
+  io_datainput.cpp
+  Compiling...
+  io_dataoutput.cpp
+  io_inop.cpp
+  io_outop.cpp
+  readdata.cpp
+  writedata.cpp
+  m01_00_data_input.cpp
+  m01_01_dans_data_input.cpp
+  m01_01_mapcoord.cpp
+  m01_02_dans_calibration_data.cpp
+  m01_03_save_raw_positions.cpp
+  seg_accn_point_on_seg.cpp
+  seg_alpha.cpp
+  seg_calculate_transf_cal_to_gcs.cpp
+  seg_calculate_transf_lcs_to_gcs.cpp
+  seg_omega.cpp
+  seg_origindot.cpp
+  seg_origindotdot.cpp
+  seg_pos_point_on_seg.cpp
+  seg_qdot.cpp
+  seg_qdotdot.cpp
+  Compiling...
+  seg_solve_wrench_eqns.cpp
+  seg_vel_point_on_seg.cpp
+  Segment.cpp
+  m03_00_calculate_kinematics.cpp
+  m03_01_diff_q.cpp
+  m03_02_calc_angular_quantities.cpp
+  m03_04_calc_linear_quantities.cpp
+  m03_05_diff_origin.cpp
+  m04_00_inverse_dynamics.cpp
+  m05_00_muscle_model.cpp
+  m05_01_pick_muscle_model.cpp
+  mus_lcs_to_gcs.cpp
+  XML_Parameters.cpp
+  Generating code
+c:\users\lr2214\documents\freebody-master\model v2\xml_parameters.cpp(53): warning C4715: 'XML_Parameters::str_to_bool': not all control paths return a value
+  All 547 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Model v2.vcxproj -> C:\Users\LR2214\Documents\FreeBody-master\Release\Freebody 2.1.exe
+  Model v2.vcxproj -> C:\Users\LR2214\Documents\FreeBody-master\Release\Freebody 2.1.pdb (Full PDB)

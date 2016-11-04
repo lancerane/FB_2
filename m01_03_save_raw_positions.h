@@ -1,0 +1,2 @@
+void m01_03_save_raw_positions(Mat_DP &raw_data, Segment **segment_data[], int frames, XML_Parameters* _parameters);
+void m01_03_save_raw_positions(Mat_DP &raw_data, Structure *calibrate_pos[], XML_Parameters* _parameters);

@@ -1,0 +1,2 @@
+void m01_04_cal_orientation(double mean_pelvis_width, double mean_shank_length, Vec_DP &RASIS, Vec_DP &LASIS, Vec_DP &FLE, Vec_DP &FAM,  int orientation[3]);
+void m01_04_cal_orientation(double mean_pelvis_width, double mean_shank_length, Vec_DP &RASIS, Vec_DP &LASIS, int y_index, int orientation[3]);
