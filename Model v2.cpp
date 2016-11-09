@@ -12,8 +12,8 @@
 
 #include "XML_Parameters.h"
 
-//int _tmain(int argc, _TCHAR* argv[]) // FOR PREDEFINED FILE
-int main( int argc, char *argv[] )        // for drag and drop  
+int _tmain(int argc, _TCHAR* argv[]) // FOR PREDEFINED FILE
+//int main( int argc, char *argv[] )        // for drag and drop  
 {
 	// Define all variables for tmain
 	const int max_segments=5, max_frames=4000, max_muscles=163, max_ligaments=14;		
@@ -24,7 +24,7 @@ int main( int argc, char *argv[] )        // for drag and drop
 
 
 
-	////for drag and drop 
+	/*////for drag and drop 
 	if (argc < 2)
 	{
 		cout<< "\nError in Reading XML Parameter File "
@@ -37,10 +37,10 @@ int main( int argc, char *argv[] )        // for drag and drop
 	
 
     xml_leg_parameters->load_parameters_from_file(parameter_filename);
-	//// for drag and drop 
+	//// for drag and drop */
 
 
-	//xml_leg_parameters->load_parameters_from_file("D:\\Dataset_comparison\\Simulation\\C01\\C01_Walking2_v2.1.xml");
+	xml_leg_parameters->load_parameters_from_file("\\\\icnas2.cc.ic.ac.uk\\lr2214\\Desktop\\FESstudy0607\\LR\\running_04.xml");
 
 
 

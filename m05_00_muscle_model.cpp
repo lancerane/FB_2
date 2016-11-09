@@ -37,6 +37,7 @@ void m05_00_muscle_model(Segment **segment_data[], Structure *calibrate_pos[], M
 
 	// Calculate musculoskeletal geometry for each frame
 
+
 	for (int i=0; i<frames; i++) 
 	{
 		for (int j=0; j<muscles; j++) 
@@ -44,18 +45,38 @@ void m05_00_muscle_model(Segment **segment_data[], Structure *calibrate_pos[], M
 			muscle_data[i][j]->mus_lcs_to_gcs(segment_data,calibrate_pos);
 			muscle_data[i][j]->mus_length();
 			
+			
+		
 		
 		}
 	}
+
+	for (int i = 0; i < frames; i++)
+	{
+		for (int j = 0; j < muscles; j++)
+		{
+
+			muscle_data[i][j]->mus_tendon_length_calc(muscle_data, _parameters, frames, j);
+
+		}
+	}
+
+
+
 	for (int i=1; i<frames-1; i++) 
 	{
 		for (int j=0; j<muscles; j++) 
 		{
 			muscle_data[i][j]->mus_length_change(muscle_data,j);
 			muscle_data[i][j]->mus_upper_bound();
-			muscle_data[i][j]->mus_length_velocity_factors(_parameters, j);
+			muscle_data[i][j]->mus_length_velocity_factors(j);
+			
 		}
 	}
+
+	
+	
+
 	for (int i=0; i<frames; i++) 
 	{
 		for (int j=0; j<ligaments; j++) 
@@ -63,6 +84,7 @@ void m05_00_muscle_model(Segment **segment_data[], Structure *calibrate_pos[], M
 
 			ligament_data[i][j]->mus_lcs_to_gcs(segment_data,calibrate_pos);
 			ligament_data[i][j]->mus_upper_bound();
+			
 		}
 	}
 
@@ -78,12 +100,19 @@ void m05_00_muscle_model(Segment **segment_data[], Structure *calibrate_pos[], M
 //			muscle_data[i][j]->mus_opt_values_1(segment_data);
 			//cout<<j<<endl;
 
+			
+
 			muscle_data[i][j]->mus_opt_values_2(segment_data);
 //			muscle_data[i][j]->mus_opt_values_3(segment_data,patellar_tendon);
 		}
 //		patellar_tendon[i]->mus_opt_pt_1(segment_data);
 		patellar_tendon[i]->mus_opt_pt_2(segment_data);
 	}
+
+
+
+	
+
 	for (int i=0; i<frames; i++) 
 	{
 		for (int j=0; j<ligaments; j++) 

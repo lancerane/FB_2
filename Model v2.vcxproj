@@ -95,6 +95,7 @@
     <ClCompile Include="m06_07_output_marker.cpp" />
     <ClCompile Include="m06_08_output_ref_coord.cpp" />
     <ClCompile Include="mus_length_velocity_factors.cpp" />
+    <ClCompile Include="mus_tendon_length_calc.cpp" />
     <ClCompile Include="XML_anatomy_dataset_parameters.cpp" />
     <ClCompile Include="kin_cardan.cpp" />
     <ClCompile Include="kin_compare_vec.cpp" />

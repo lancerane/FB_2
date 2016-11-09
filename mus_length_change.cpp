@@ -10,8 +10,8 @@ void Muscle::mus_length_change(Muscle **muscle_data[], int muscle) {
 
 	int frame=int (this->frame);
 
-	this->length_change=(muscle_data[frame+1][muscle]->length-muscle_data[frame-1][muscle]->length)/(muscle_data[frame+1][muscle]->time-
-		muscle_data[frame-1][muscle]->time);
+	this->length_change=-(muscle_data[frame+1][muscle]->length-muscle_data[frame-1][muscle]->length)/(muscle_data[frame+1][muscle]->time-
+		muscle_data[frame-1][muscle]->time); //LR added (-) 8/11 so that shortening velocities are positive as required by f-v model
 
 
 	return;

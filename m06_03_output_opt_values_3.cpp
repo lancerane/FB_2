@@ -23,11 +23,12 @@ void m06_03_output_opt_values_3(Segment **segment_data[], Muscle **muscle_data[]
 	Mat_DP l0(frames,ligaments), l1(frames,ligaments), l2(frames,ligaments);
 	Mat_DP l3(frames,ligaments), l4(frames,ligaments), l5(frames,ligaments);
 	Mat_DP pat_tendon(frames,9);
-	Mat_DP rhs(frames,6*(segments-2)), force_ub(frames,muscles), ligaments_ub(frames,ligaments), ratio(frames,muscles);
+	Mat_DP rhs(frames,6*(segments-2)), force_ub(frames,muscles), force_lb(frames, muscles), ligaments_ub(frames,ligaments), ratio(frames,muscles);
 	Mat_DP contact(frames,21);
 
 	MATHEMATICS::math_zeromatrix(rhs);
 	MATHEMATICS::math_zeromatrix(force_ub);
+	MATHEMATICS::math_zeromatrix(force_lb);
 	MATHEMATICS::math_zeromatrix(ligaments_ub);
 	MATHEMATICS::math_zeromatrix(ratio);
 	MATHEMATICS::math_zeromatrix(contact);
@@ -178,14 +179,16 @@ void m06_03_output_opt_values_3(Segment **segment_data[], Muscle **muscle_data[]
 		for (int j=0; j<muscles; j++) 
 		{
 
-			force_ub[i][j]=muscle_data[i][j]->max_force;
-
+			force_ub[i][j]=muscle_data[i][j]->max_force*(muscle_data[i][j]->active_force_factor + muscle_data[i][j]->passive_force_factor);
+			force_lb[i][j] = muscle_data[i][j]->max_force*muscle_data[i][j]->passive_force_factor;
 		}
 	}
 	////////**********************************************************/////////////////////////////////////////////////////
 	string filename_force_ub=output_folder_for_optimisation +"\\" + study_name + "_"+"force_ub.csv";
+	string filename_force_lb = output_folder_for_optimisation + "\\" + study_name + "_" + "force_lb.csv";
 
 	io_dataoutput(filename_force_ub,force_ub);
+	io_dataoutput(filename_force_lb, force_lb);
 
 	// Output force upper bounds of ligament elements for optimization
 

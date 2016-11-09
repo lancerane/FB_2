@@ -417,6 +417,9 @@
     <ClCompile Include="mus_length_velocity_factors.cpp">
       <Filter>Source Files\Lib - Class: Muscle</Filter>
     </ClCompile>
+    <ClCompile Include="mus_tendon_length_calc.cpp">
+      <Filter>Source Files\Lib - Class: Muscle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kinematics.h">
